@@ -1,0 +1,1 @@
+void save_list(struct stats*stat,struct game*game1);

@@ -1,0 +1,1 @@
+int AIloadGame(struct game *game1, struct stats *stat,int AItotal_games, int AIp1_wins, int AI_wins, int AIdraws);
