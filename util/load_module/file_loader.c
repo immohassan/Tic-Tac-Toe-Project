@@ -18,7 +18,7 @@ void file_list(struct stats *stat, struct game *game1)
         closedir(list);
     }
     printf("\n\nEnter the name of the file ( Without Extension ) you want to load: ");
-    scanf("%s", &file);
+    scanf("%s",file);
     char ext[NAME_LENGTH] = ".txt";      //again concatinating as in stats_saver.c
     char str[NAME_LENGTH] = "./saved_games/";
     strcat(str, file); // including path to the file name
@@ -37,7 +37,7 @@ void loader(struct stats *stat, char str[NAME_LENGTH], struct game *game1)
     }
     else
     {
-        fscanf(file, "%s %s %d %d %d %d",&p1,&p2, &tgames, &p1win, &p2win, &draw);   //getting data from file
+        fscanf(file, "%s %s %d %d %d %d",p1,p2, &tgames, &p1win, &p2win, &draw);   //getting data from file
         strcpy(game1->p1_name, p1); //giving names to struct
         strcpy(game1->p2_name, p2);
         fclose(file);

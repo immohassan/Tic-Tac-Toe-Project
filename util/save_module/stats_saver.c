@@ -5,7 +5,7 @@ void save_list(struct stats *stat, struct game *game1)
 {
         printf("Please enter the name of the file to save. \n");
         char file_name[10000];
-        scanf("%s", &file_name);
+        scanf("%s", file_name);
         FILE *outfile;                       //file pointer for file handling
         char ext[100] = ".txt";              //we cannot give absolute path of file in scanf 
         char str[100] = "./saved_games/";   // so we used string concatination
@@ -19,13 +19,13 @@ void save_list(struct stats *stat, struct game *game1)
         else
         {
             outfile = fopen(str, "a+");       // open file for writing
-            if (outfile == NULL)              //if fill didn't open
+            if (outfile == NULL)              //if file didn't open
             {
                 fprintf(stderr, "\nError opened file\n");
                 save_list(stat,game1);
             }
             // write struct array to file
-            fwrite(stat->file_arr, sizeof(struct stats), 1, outfile);
+            fwrite(&stat->file_arr, sizeof(struct stats), 1, outfile);
             if (fwrite != 0)
                 printf("contents to file written successfully !\n");
             else if (fwrite == 0)     //if there was an error writing the file
