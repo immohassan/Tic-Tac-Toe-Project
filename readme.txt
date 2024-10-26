@@ -29,7 +29,7 @@ manages in this folder.
 
 Additional:
 Comments are added for better understanding.
-Exceptional error handling to prevent crashing the code, but a noob might do it.
+Exceptional error handling to prevent crashing the code.
 
 Project members: 
 1- Muhammad Hassan (Team lead)
@@ -37,4 +37,4 @@ Project members:
 3- Talha Haroon
 
 
-                         ****************************************** A Caffeine_Coder's Production ******************************************
+                         ****************************************** A Caffeine_Coders Production ******************************************
